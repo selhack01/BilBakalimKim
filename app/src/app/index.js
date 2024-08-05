@@ -1,13 +1,17 @@
+import React from 'react';
 import useStyles from "./stylesheet";
 import LoginPage from "./page/loginPage";
 import { LanguageProvider } from "./context/languageContext";
+import { ThemeProvider } from './theme/index';
 
 const App = () => {
   const classes = useStyles();
 
   return (
     <LanguageProvider className={classes.app}>
-      <LoginPage />
+      <ThemeProvider>
+          <LoginPage />
+      </ThemeProvider>
     </LanguageProvider>
   );
 };
