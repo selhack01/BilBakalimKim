@@ -1,10 +1,9 @@
 import useStyles from "./stylesheet";
-// import {useContext} from "react";
-// import ThemeContext from "../../context/Context";
+import { useTheme } from "../../context/index";
 
 const Input = ({ children }) => {
-  const classes = useStyles();
-  // const { theme} = useContext(ThemeContext);
+  const { theme } = useTheme();
+  const classes = useStyles({ theme });
 
   return (
     <div className={classes.container}>

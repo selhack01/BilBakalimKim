@@ -1,6 +1,6 @@
-import React from 'react';
-import useStyles from "./stylesheet"; // import ettiğiniz stylesheet doğru olmalı
-import { useTheme } from '../../theme/index';
+import React from "react";
+import useStyles from "./stylesheet";
+import { useTheme } from "../../context/index";
 
 const ThemeButton = () => {
   const { themeName, switchTheme } = useTheme();
@@ -13,10 +13,7 @@ const ThemeButton = () => {
 
   return (
     <div>
-      <button 
-        className={classes.button}
-        onClick={handleSwitchTheme}
-      >
+      <button className={classes.button} onClick={handleSwitchTheme}>
         <img
           src="assets/image/noun-sun-moon-674345.png"
           alt="Switch Theme"

@@ -1,9 +1,11 @@
 import useStyles from "./stylesheet";
 import React, { useState } from "react";
 import { useTranslation } from "../../context/languageContext";
+import { useTheme } from "../../context/index";
 
 const Switcher = ({ onSwitch }) => {
-  const classes = useStyles();
+  const { theme } = useTheme();
+  const classes = useStyles({ theme });
   const { t } = useTranslation();
   const [isSingIn, setisSingIn] = useState(true);
 
@@ -18,20 +20,23 @@ const Switcher = ({ onSwitch }) => {
         className={`${classes.switcherButton} ${
           isSingIn ? classes.active : ""
         }`}
-        onClick={handleSwitch}>
+        onClick={handleSwitch}
+      >
         {t("register")}
       </div>
       <div
         className={`${classes.switcherButton} ${
           !isSingIn ? classes.active : ""
         }`}
-        onClick={handleSwitch}>
+        onClick={handleSwitch}
+      >
         {t("login")}
       </div>
       <div
         className={`${classes.toggle} ${
           isSingIn ? classes.left : classes.right
-        }`}/>
+        }`}
+      />
     </div>
   );
 };

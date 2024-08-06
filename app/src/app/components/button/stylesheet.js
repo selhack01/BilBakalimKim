@@ -1,38 +1,32 @@
 import { createUseStyles } from "react-jss";
 
-const useStyles = createUseStyles({
-  light: {     
-    borderBottom: "4px solid black",
-    borderRight: "4px solid black",
-    borderLeft: "1px solid black",
-    borderTop: "1px solid black",
-    backgroundColor: "#ffffff",
-    fontFamily: "CustomFont2",
+const useStyles = createUseStyles((theme) => ({
+  button: {
+    borderBottom: `4px solid ${theme.colors.primary}`,
+    borderRight: `4px solid ${theme.colors.primary}`,
+    borderLeft: `1px solid ${theme.colors.primary}`,
+    borderTop: `1px solid ${theme.colors.primary}`,
+    fontFamily: theme.typography.text2.fontFamily,
+    fontSize: theme.typography.text3.fontSize,
+    backgroundColor: theme.colors.input,
+    color: theme.colors.primary,
     padding: "10px 30px",
-    fontSize: "16px",
-    color: "#1c1c1a",
-    height:'100%',
+    height: "100%",
   },
-  dark: {
-    borderBottom: "4px solid white",
-    borderRight: "4px solid white",
-    borderLeft: "1px solid white",
-    fontFamily: "CustomFont2",
-    borderTop: "1px solid white",
-    backgroundColor: "#1c1c1a",
-    padding: "10px 30px",
-    fontSize: "16px",
-    color: "white",
-    height:'100%',
+  clicked: {
+    animation: "$clickEffect 0.3s ease",
   },
-  active: {
-    transition: "transform 0.1s ease-in-out",   
-    borderBottom: "2px solid",
-    transform: "scale(0.95)",
-    borderRight: "2px solid",
-    borderLeft: "2px solid",
-    borderTop: "2px solid",
+  "@keyframes clickEffect": {
+    "0%": {
+      transform: "scale(1)",
+    },
+    "50%": {
+      transform: "scale(0.9)",
+    },
+    "100%": {
+      transform: "scale(1)",
+    },
   },
-});
+}));
 
 export default useStyles;

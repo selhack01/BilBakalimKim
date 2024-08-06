@@ -1,6 +1,7 @@
+// stylesheet.js
 import { createUseStyles } from "react-jss";
 
-const useStyles = createUseStyles({
+const useStyles = createUseStyles((theme) => ({
   container: {
     backgroundColor: "transparent",
     flexDirection: "column",
@@ -11,18 +12,20 @@ const useStyles = createUseStyles({
     gap: "10px",
   },
   label: {
-    fontFamily: "CustomFont2",
-    fontSize: "16px",
+    fontFamily: theme.typography.text2.fontFamily,
+    fontSize: theme.typography.text3.fontSize,
+    color: theme.colors.primary,
     width: "100%",
   },
   input: {
-    border: "1px solid #1A1C1A",
-    fontFamily: "CustomFont2",
-    color: "#1a1c1a",
-    fontSize: "14px",
+    fontFamily: theme.typography.text2.fontFamily,
+    border: `1px solid ${theme.colors.primary}`,
+    fontSize: theme.typography.text4.fontSize,
+    backgroundColor: theme.colors.input,
+    color: theme.colors.primary,
     width: "300px",
     padding: "8px",
-  }
-});
+  },
+}));
 
 export default useStyles;

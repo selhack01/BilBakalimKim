@@ -1,12 +1,22 @@
 import useStyles from "./stylesheet";
+import { useTheme } from "../../context/index";
+import { useState } from "react";
 
 const DefaultButton = ({ children }) => {
-  const classes = useStyles();
+  const { theme } = useTheme();
+  const classes = useStyles({ theme });
+  const [isClicked, setIsClicked] = useState(false);
+
+  const clicked = () => {
+    setIsClicked(true);
+    setTimeout(() => setIsClicked(false), 300);
+  };
+
+  const clickedClass = isClicked ? classes.clicked : "";
 
   return (
     <div>
-      <button 
-      className={classes.light}>
+      <button onClick={clicked} className={`${classes.button} ${clickedClass}`}>
         {children}
       </button>
     </div>

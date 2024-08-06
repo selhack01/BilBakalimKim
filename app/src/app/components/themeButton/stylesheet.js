@@ -14,7 +14,7 @@ const useStyles = createUseStyles({
     filter: "invert(40%)",
     height: "50px",
     width: "50px",
-  }
+  },
 });
 
 export default useStyles;

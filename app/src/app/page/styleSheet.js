@@ -1,8 +1,9 @@
+// stylesheet.js
 import { createUseStyles } from "react-jss";
 
-const useStyles = createUseStyles({
-  light: {
-    backgroundImage: `url('assets/image/white.jpg')`,
+const useStyles = createUseStyles((theme) => ({
+  container: {
+    backgroundImage: `url('${theme.url.bacgroundImageUrl}')`,
     backgroundRepeat: "no-repeat",
     justifyContent: "center",
     flexDirection: "column",
@@ -10,18 +11,6 @@ const useStyles = createUseStyles({
     alignItems: "center",
     height: "100vh",
     display: "flex",
-    gap: "60px",
-    margin: 0,
-  },
-  dark: {
-    backgroundImage: `url('assets/image/black.jpg')`,
-    backgroundRepeat: "no-repeat",
-    justifyContent: "center",
-    backgroundSize: "cover",
-    flexDirection: "column",
-    alignItems: "center",
-    display: "flex",
-    height: "100vh",
     gap: "60px",
     margin: 0,
   },
@@ -38,14 +27,14 @@ const useStyles = createUseStyles({
   },
   accountArea: {
     boxShadow: "4px 4px 4px rgba(0, 0, 0, 0.25)",
-    border: "1px solid #1A1C1A",
-    backgroundColor: "#ECECEC",
+    border: `1px solid ${theme.colors.primary}`,
+    backgroundColor: theme.colors.gray,
     justifyContent: "center",
     flexDirection: "column",
     alignItems: "center",
     padding: "10px",
     display: "flex",
   },
-});
+}));
 
 export default useStyles;

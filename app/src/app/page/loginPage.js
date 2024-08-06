@@ -1,5 +1,6 @@
 import useStyles from "./styleSheet";
 import { useTranslation } from "../context/languageContext";
+import { useTheme } from "../context/index";
 import {
   LanguageButton,
   DefaultButton,
@@ -10,11 +11,12 @@ import {
 } from "../components";
 
 const LoginPage = () => {
-  const classes = useStyles();
+  const { theme } = useTheme();
+  const classes = useStyles({ theme });
   const { t } = useTranslation();
 
   return (
-    <div className={classes.light}>
+    <div className={classes.container}>
       <div className={classes.contextArea}>
         <ThemeButton />
         <LanguageButton />
