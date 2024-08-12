@@ -2,8 +2,12 @@
   "welcome": "React'a Hoşgeldiniz",
   "password-again": "Şifre Tekrar",
   "guess-who": "Bil Bakalım Kim?",
+  "not-found": "404 Bulunamadı",
   "username": "Kullanıcı Adı",
-  "register": "KAYIT OL",
+  "register": "Kayıt Ol",
   "login": "Giriş Yap",
-  "password": "Şifre"
+  "password": "Şifre",
+  "play": "Oyna",
+  "your-score": "Skorunuz",
+    "exit": "Çıkış Yap"
 }

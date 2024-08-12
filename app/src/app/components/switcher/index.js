@@ -7,18 +7,18 @@ const Switcher = ({ onSwitch }) => {
   const { theme } = useTheme();
   const classes = useStyles({ theme });
   const { t } = useTranslation();
-  const [isSingIn, setisSingIn] = useState(true);
+  const [isSignIn, setIsSignIn] = useState(true); // isSingIn yerine isSignIn
 
   const handleSwitch = () => {
-    setisSingIn(!isSingIn);
-    if (onSwitch) onSwitch(!isSingIn ? "signup" : "login");
+    setIsSignIn(!isSignIn);
+    if (onSwitch) onSwitch(!isSignIn ? "signup" : "login");
   };
-  // console.log(isSingIn);
+
   return (
     <div className={classes.switcher}>
       <div
         className={`${classes.switcherButton} ${
-          isSingIn ? classes.active : ""
+          isSignIn ? classes.active : ""
         }`}
         onClick={handleSwitch}
       >
@@ -26,7 +26,7 @@ const Switcher = ({ onSwitch }) => {
       </div>
       <div
         className={`${classes.switcherButton} ${
-          !isSingIn ? classes.active : ""
+          !isSignIn ? classes.active : ""
         }`}
         onClick={handleSwitch}
       >
@@ -34,7 +34,7 @@ const Switcher = ({ onSwitch }) => {
       </div>
       <div
         className={`${classes.toggle} ${
-          isSingIn ? classes.left : classes.right
+          isSignIn ? classes.left : classes.right
         }`}
       />
     </div>

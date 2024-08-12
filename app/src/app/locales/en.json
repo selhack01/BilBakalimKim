@@ -1,9 +1,14 @@
 {
   "password-again": "Password Again",
   "welcome": "Welcome to React",
+  "not-found": "404 Not Found",
   "guess-who": "Guess Who?",
   "register": "Register",
   "username": "Username",
   "password": "Password",
-  "login": "Login"
+  "login": "Login",
+  "play": "Play",
+  "your-score": "Your Score",
+  "exit": "Exit"
+  
 }

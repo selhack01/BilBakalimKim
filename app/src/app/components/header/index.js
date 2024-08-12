@@ -1,13 +1,12 @@
 import useStyles from "./stylesheet";
-import { useTranslation } from "../../context/languageContext";
 import { useTheme } from "../../context/index";
 
-const Header = () => {
+const Header = ({children , style }) => {
   const { theme } = useTheme();
   const classes = useStyles({ theme });
-  const { t } = useTranslation();
 
-  return <span className={classes.header}>{t("guess-who")}</span>;
+
+  return <span style={style} className={classes.header}>{children}</span>;
 };
 
 export default Header;

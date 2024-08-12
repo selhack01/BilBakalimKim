@@ -1,4 +1,3 @@
-// stylesheet.js
 import { createUseStyles } from "react-jss";
 
 const useStyles = createUseStyles((theme) => ({
@@ -14,7 +13,7 @@ const useStyles = createUseStyles((theme) => ({
     gap: "60px",
     margin: 0,
   },
-  contextArea: {
+  contextSection: {
     justifyContent: "end",
     alignItems: "center",
     flexDirection: "row",
@@ -25,7 +24,7 @@ const useStyles = createUseStyles((theme) => ({
     top: "40px",
     gap: "20px",
   },
-  accountArea: {
+  accountSection: {
     boxShadow: "4px 4px 4px rgba(0, 0, 0, 0.25)",
     border: `1px solid ${theme.colors.primary}`,
     backgroundColor: theme.colors.gray,
