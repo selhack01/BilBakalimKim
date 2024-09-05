@@ -1,8 +1,8 @@
 import { Route, Routes } from "react-router-dom";
-import LoginPage from "../page/loginpage";
-import NotFoundPage from "../page/404page";
-import MainPage from "../page/mainpage";
 import QuestionPage from "../page/question";
+import NotFoundPage from "../page/404page";
+import LoginPage from "../page/loginpage";
+import MainPage from "../page/mainpage";
 
 const Navigation = () => {
   return (

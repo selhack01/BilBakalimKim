@@ -8,8 +8,8 @@ const useStyles = createUseStyles((theme) => ({
     borderTop: `1px solid ${theme.colors.primary}`,
     fontSize: theme.typography.text3.fontSize,
     backgroundColor: theme.colors.input,
-    fontFamily: "Customfont2",
     color: theme.colors.primary,
+    fontFamily: "Customfont2",
     padding: "10px 30px",
     height: "100%",
     width:'100%'

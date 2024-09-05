@@ -2,7 +2,7 @@ import { createUseStyles } from "react-jss";
 
 const useStyles = createUseStyles((theme) => ({
   text: {
-    fontSize: theme.typography.header2.fontSize,
+    fontSize: theme.typography.title1.fontSize,
     backgroundColor: "transparent",
     color: theme.colors.primary,
     fontFamily: "CustomFont2",

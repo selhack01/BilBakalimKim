@@ -13,12 +13,12 @@ const useStyles = createUseStyles((theme) => ({
   },
   switcherButton: {
     fontFamily: theme.typography.header2.fontFamily,
+    fontSize: theme.typography.text2.fontSize,
     color: theme.colors.primary,
     transition: "color 0.3s",
     padding: "10px 20px",
     textAlign: "center",
     cursor: "pointer",
-    fontSize: theme.typography.text2.fontSize,
     flex: 1,
   },
   active: {
@@ -26,8 +26,8 @@ const useStyles = createUseStyles((theme) => ({
     zIndex: 1,
   },
   toggle: {
-    transition: "transform 0.3s",
     backgroundColor: theme.colors.primary,
+    transition: "transform 0.3s",
     position: "absolute",
     height: "100%",
     width: "50%",

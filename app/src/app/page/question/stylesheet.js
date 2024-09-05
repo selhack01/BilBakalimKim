@@ -25,6 +25,7 @@ const useStyles = createUseStyles((theme) => ({
     width: "90%",
   },
   score: {
+    color: theme.colors.primary,
     fontFamily: "Customfont1",
     justifyContent: "end",
     flexDirection: "row",
@@ -33,9 +34,10 @@ const useStyles = createUseStyles((theme) => ({
     display: "flex",
     width: "90%",
   },
-  question: {
+  questionArea: {
     display: "flex",
     padding: "10px",
+    fontSize:'25px',
     width: "100%",
     height:100,
   },
@@ -48,8 +50,6 @@ const useStyles = createUseStyles((theme) => ({
   },
   options: {
     justifyContent:"space-between",
-    //flexDirection:"column",
-    // padding: "10px",
     display: "flex",
     width:"100%",
     gap: "10px",
@@ -59,7 +59,13 @@ const useStyles = createUseStyles((theme) => ({
     alignItems: "end",
     display: "flex",
     width: "90%",
-  }
+  },
+  
+  "@media (max-width: 1024px)": {
+    options: {
+      flexDirection:"column"
+    }
+  },
 }));
 
 export default useStyles;

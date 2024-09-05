@@ -1,11 +1,12 @@
-import useStyles from "./stylesheet";
 import { useTranslation } from "../../context/languageContext";
-import { useTheme } from "../../context/index";
 import { Header, LanguageButton, ThemeButton } from "../../components";
+import { useTheme } from "../../context/index";
+import useStyles from "./stylesheet";
 
 const NotFoundPage = () => {
-  const { theme} = useTheme();
+  const { theme } = useTheme();
   const classes = useStyles({ theme });
+
   const { t } = useTranslation();
 
   return (

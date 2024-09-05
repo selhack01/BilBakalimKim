@@ -1,12 +1,17 @@
-import useStyles from "./stylesheet.js";
 import { useTheme } from "../../context/index";
+import useStyles from "./stylesheet.js";
 
-const Text = ({children}) => {
+const Text = ({ children }, fontSize) => {
   const { theme } = useTheme();
   const classes = useStyles({ theme });
 
-
-  return <span className={classes.text}>{children}</span>;
+  return (
+    <span 
+    style={fontSize} 
+    className={classes.text}>
+      {children}
+    </span>
+  );
 };
 
 export default Text;

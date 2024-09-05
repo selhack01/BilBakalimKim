@@ -1,14 +1,18 @@
 {
+  "no-highscore": "You have to play it before you can see it here",
+  "fill-i- all-fields": "Make sure you fill in all fields",
+  "passwords-do-not-match": "Passwords do not match",
+  "all-highscore": "All Time Highscore",
   "password-again": "Password Again",
+  "your-highscore": "Your Highscore",
   "welcome": "Welcome to React",
   "not-found": "404 Not Found",
+  "your-score": "Your Score",
   "guess-who": "Guess Who?",
   "register": "Register",
   "username": "Username",
   "password": "Password",
   "login": "Login",
   "play": "Play",
-  "your-score": "Your Score",
   "exit": "Exit"
-  
 }

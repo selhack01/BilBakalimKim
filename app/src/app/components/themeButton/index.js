@@ -1,6 +1,6 @@
-import React from "react";
-import useStyles from "./stylesheet";
 import { useTheme } from "../../context/index";
+import useStyles from "./stylesheet";
+import React from "react";
 
 const ThemeButton = () => {
   const { themeName, switchTheme } = useTheme();

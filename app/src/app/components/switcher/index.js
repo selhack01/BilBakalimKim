@@ -1,13 +1,14 @@
-import useStyles from "./stylesheet";
-import React, { useState } from "react";
 import { useTranslation } from "../../context/languageContext";
 import { useTheme } from "../../context/index";
+import React, { useState } from "react";
+import useStyles from "./stylesheet";
 
 const Switcher = ({ onSwitch }) => {
+  const [isSignIn, setIsSignIn] = useState(true);
+  const { t } = useTranslation();
+  
   const { theme } = useTheme();
   const classes = useStyles({ theme });
-  const { t } = useTranslation();
-  const [isSignIn, setIsSignIn] = useState(true); // isSingIn yerine isSignIn
 
   const handleSwitch = () => {
     setIsSignIn(!isSignIn);

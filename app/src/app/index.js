@@ -1,8 +1,9 @@
-import React from "react";
-import useStyles from "./stylesheet";
 import { LanguageProvider } from "./context/languageContext";
+import { UserProvider } from "./context/userContext";
 import { ThemeProvider } from "./context/index";
 import Navigation from "./navigation";
+import useStyles from "./stylesheet";
+import React from "react";
 
 const App = () => {
   const classes = useStyles();
@@ -10,7 +11,9 @@ const App = () => {
   return (
     <LanguageProvider className={classes.app}>
       <ThemeProvider>
-        <Navigation/>
+        <UserProvider>
+          <Navigation />
+        </UserProvider>
       </ThemeProvider>
     </LanguageProvider>
   );

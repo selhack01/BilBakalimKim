@@ -1,13 +1,18 @@
 {
+  "no-highscore": "Burada görebilmek için önce oynamanız gerekir",
+  "fill-i- all-fields": "Tüm alanları doldurduğunuzdan emin olun",
+  "passwords-do-not-match": "Şifreniz eşleşmiyor",
+  "your-highscore": "Yüksek Skorlarınız",
+  "all-highscore": "Yüksek Skorlar",
   "welcome": "React'a Hoşgeldiniz",
   "password-again": "Şifre Tekrar",
   "guess-who": "Bil Bakalım Kim?",
   "not-found": "404 Bulunamadı",
   "username": "Kullanıcı Adı",
+  "your-score": "Skorunuz",
   "register": "Kayıt Ol",
   "login": "Giriş Yap",
   "password": "Şifre",
-  "play": "Oyna",
-  "your-score": "Skorunuz",
-    "exit": "Çıkış Yap"
+  "exit": "Çıkış Yap",
+  "play": "Oyna"
 }

@@ -2,12 +2,12 @@ import { createUseStyles } from "react-jss";
 
 const customFonts = [
   {
-    fontFamily: "CustomFont1",
     src: "url('/assets/fonts/JacquesFrancoisShadow-Regular.ttf')",
+    fontFamily: "CustomFont1",
   },
   {
-    fontFamily: "CustomFont2",
     src: "url('/assets/fonts/Habibi-Regular.ttf')",
+    fontFamily: "CustomFont2",
   },
 ];
 
@@ -15,8 +15,8 @@ const useStyles = createUseStyles({
   "@global": {
     "@font-face": customFonts,
     "*": { margin: 0, padding: 0 },
-
     "html, body": {
+      userSelect: "none",
       height: "100%",
       width: "100%",
     },

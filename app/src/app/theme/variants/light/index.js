@@ -1,48 +1,48 @@
 const colors = {
-  primary: "#1A1C1A",
   secondary: "#FFFFFF",
-  gray: "#ECECEC",
-  input: "#FFFFFF",
   succses: "#C2FFCC",
-  wrong: "#FFC2C2",
+  primary: "#1A1C1A",
   danger: "#FF4747",
+  wrong: "#FFC2C2",
+  input: "#FFFFFF",
   blue: "#74A4FF",
+  gray: "#ECECEC",
 };
 const url = {
   bacgroundImageUrl: "assets/image/white.jpg",
 };
 const typography = {
   header1: {
-    fontSize: 64,
     fontFamily: "CustomFont1",
+    fontSize: 64,
   },
   header2: {
-    fontSize: 36,
     fontFamily: "CustomFont1",
+    fontSize: 36,
   },
   title1: {
-    fontSize: 24,
     fontFamily: "CustomFont1",
+    fontSize: 24,
   },
   text1: {
-    fontSize: 48,
     fontFamily: "CustomFont2",
+    fontSize: 48,
   },
   text2: {
-    fontSize: 20,
     fontFamily: "CustomFont2",
+    fontSize: 20,
   },
   text3: {
-    fontSize: 16,
     fontFamily: "CustomFont2",
+    fontSize: 16,
   },
   text4: {
-    fontSize: 12,
     fontFamily: "CustomFont2",
+    fontSize: 12,
   },
   text5: {
-    fontSize: 8,
     fontFamily: "CustomFont2",
+    fontSize: 8,
   },
 };
 const light = {
