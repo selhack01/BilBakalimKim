@@ -39,7 +39,7 @@ const QuestionPage = () => {
           throw new Error("Network response was not ok");
         } else {
           const data = await response.json();
-          // console.log("FETCH ATIYOMM");
+          // console.log("VALLA ATIYOMM");
           setQuestion(data);
         }
       }
@@ -76,7 +76,7 @@ const QuestionPage = () => {
       theme.colors.input,
     ]);
 
-    if (currentStep === 10) {
+    if (currentStep >= 10) {
       setCurrentStep(0);
       navigate("/main", { state: { score } });
     }
@@ -84,7 +84,7 @@ const QuestionPage = () => {
     if (currentStep < 10) {
       const newQuestion = dataFilter(questions, difficultyLevel);
       setSelectedQuestions(newQuestion);
-      //  console.log(selectedQuestions, currentStep);
+        console.log(selectedQuestions, currentStep);
 
       if (selectedQuestions !== undefined) {
         setCurrentStep(currentStep + 1);
@@ -143,11 +143,10 @@ const QuestionPage = () => {
         setScore(score + 75);
       } else if (selectedQuestions.difficulty == 2) {
         setScore(score + 150);
-      } else if (selectedQuestions.difficulty == 3) {
+      } else{
         setScore(score + 225);
-      } else {
-        setScore(score + 300);
       }
+
     } else {
       answers.forEach((answer, index) => {
         if (selectedAnswer == answer) {

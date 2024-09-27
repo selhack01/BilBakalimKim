@@ -7,9 +7,10 @@ import { useTheme } from "../../context/index";
 import useStyles from "./stylsheet";
 
 const MainPage = () => {
+  const token = localStorage.getItem("token");
   const { theme } = useTheme();
   const classes = useStyles({ theme });
-  
+
   const { user, logout } = useUser();
   const { t } = useTranslation();
   const navigate = useNavigate();
@@ -23,9 +24,15 @@ const MainPage = () => {
   useEffect(() => {
     const fetchHighScores = async () => {
       try {
-        const response = await fetch("http://localhost:3001/highscores");
+        const response = await fetch("http://localhost:3001/highscores", {
+          method: "GET",
+          headers: {
+            Authorization: `Bearer ${token}`,
+            "Content-Type": "application/json",
+          },
+        });
         if (!response.ok) {
-          throw new Error("Network response was not ok");
+          throw new Error("burada veriyoo");
         }
         const data = await response.json();
         setHighScores(data);
@@ -38,13 +45,20 @@ const MainPage = () => {
       try {
         if (user?.username) {
           const response = await fetch(
-            `http://localhost:3001/highscores/${user.username}`
+            `http://localhost:3001/highscores/${user.username}`,
+            {
+              method: "GET",
+              headers: {
+                Authorization: `Bearer ${token}`,
+                "Content-Type": "application/json",
+              },
+            }
           );
           if (!response.ok) {
             throw new Error("Network response was not ok");
           }
           const data = await response.json();
-          //  console.log(data);
+          console.log(data);
           if (score != undefined) {
             data.highScores.push(score);
             data.highScores = Array.from(new Set([...data.highScores]));
@@ -70,31 +84,29 @@ const MainPage = () => {
   }, []);
 
   const updateScore = async (highscore) => {
-    if (highscore.length == 0) {
+    if (highscore.length === 0) {
       console.error("personalHighScores is empty, aborting POST request.");
       return;
     }
 
     try {
-      const response = await fetch(
-        `http://localhost:3001/updateScore/${user.username}`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ score: highscore }),
-        }
-      );
+      const response = await fetch(`http://localhost:3001/updateScore`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify({ score: highscore, userId: user.id }),
+      });
 
       if (!response.ok) {
-        throw new Error("Network response was not ok");
+        throw new Error("Score update failed");
       }
 
       const data = await response.json();
       // console.log("Score updated successfully:", data);
     } catch (error) {
-      console.error("Failed to update score:", error);
+      // console.error("Failed to update score:", error);
     }
   };
 

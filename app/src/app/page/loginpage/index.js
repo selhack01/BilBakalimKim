@@ -81,7 +81,9 @@ const LoginPage = () => {
           setIsSignIn(true);
           navigate("/");
         } else {
+          localStorage.setItem("token", result.token);
           login(result.user);
+          console.log(result)
           navigate("/main");
         }
       }
